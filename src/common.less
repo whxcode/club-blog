@@ -1,0 +1,89 @@
+@black: #071E3D;
+@red: red;
+@grey: #919BAA;
+@border-color: #E6E8EC;
+@spaceRow: 12px;
+@duration: 1s;
+@default-background: #F5F6FA;
+@blue: blue;
+
+.undue(@height,@width: inherit) {
+  &:empty {
+    min-width: @width;
+    min-height: @height;
+    background: @default-background;
+    animation: undue 1s infinite alternate;
+  }
+}
+
+
+
+@keyframes undue {
+  from {
+    background: @default-background;
+  } to {
+      background: lighten(@default-background,5%);
+    }
+}
+
+/* 旋转动画 */
+@keyframes rotate {
+  from {
+    transform: rotateZ(0) ;
+  } to {
+      transform: rotateZ(360deg) ;
+    }
+}
+* {
+  padding: 0;
+  outline: none;
+  border: none;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+input,button,textarea {
+  background: none;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clear-fix:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.line-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  // white-space: nowrap;
+}
+
+.line-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.line-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,102 @@
+import React from "react"
+import AwesomeSwiper from 'react-awesome-swiper'
+import Image from "@/components/Image"
+const config: any = {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+    },
+
+};
+const Index = () => {
+    return <article className="home-index">
+        <header className="header">
+            <p className="phrase">Hi,today</p>
+            <h1 className="lately-user">Lately user</h1>
+            <span className="user">
+                <i className="icon iconfont iconuser" />
+            </span>
+        </header>
+        <section className="swip">
+
+        </section>
+        <section className="lately-users">
+            <ul className="users">
+                <li className="item">
+                    <div className="user"><Image className="user-avatar" src="1"/></div>
+                    <p className="username">email</p>
+                </li>
+                <li className="item">
+                    <div className="user"><Image className="user-avatar" src="1"/></div>
+                    <p className="username">email</p>
+                </li>
+                <li className="item">
+                    <div className="user"><Image className="user-avatar" src="1"/></div>
+                    <p className="username">email</p>
+                </li>
+            </ul>
+        </section>
+        <section className="hots">
+            <AwesomeSwiper config={config} className="your-classname">
+                <div className="swiper-wrapper">
+                    <div className="swiper-slide">
+                        <div className="hot">
+                            <Image className="hot-card" src="https://ss1.bdstatic.com/70c1FuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3551370719,1936559374&fm=26&gp=0.jpg"/>
+                            <p className="title">Tomorrow</p>
+                        </div>
+
+                    </div>
+                    <div className="swiper-slide">
+                        <div className="hot">
+                            <Image className="hot-card" src="https://ss1.bdstatic.com/70c1FuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3551370719,1936559374&fm=26&gp=0.jpg"/>
+                            <p className="title">Tomorrow</p>
+                        </div>
+                    </div>
+                </div>
+            </AwesomeSwiper>
+        </section>
+        <section className="lately-articles">
+            <div className="label">
+                Latest News
+            </div>
+            <section className="articles">
+                <div className="article">
+                    <div className="left">
+                        <Image src="123" className="icon-cover"/>
+                    </div>
+                    <div className="base">
+                        <p className="title line-1">Big Dogs</p>
+                        <p className="description line-2">12321333333333333333333333333333333333333333333333333</p>
+                    </div>
+                </div>
+                <div className="article">
+                    <div className="left">
+                        <Image src="123" className="icon-cover"/>
+                    </div>
+                    <div className="base">
+                        <p className="title line-1">Big Dogs</p>
+                        <p className="description line-2">12321333333333333333333333333333333333333333333333333</p>
+                    </div>
+                </div>
+                <div className="article">
+                    <div className="left">
+                        <Image src="123" className="icon-cover"/>
+                    </div>
+                    <div className="base">
+                        <p className="title line-1">Big Dogs</p>
+                        <p className="description line-2">12321333333333333333333333333333333333333333333333333</p>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+    </article>
+}
+export default Index
