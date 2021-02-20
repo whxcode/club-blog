@@ -35,6 +35,9 @@ const routes: Array<RouterI> = [
             {
                 path:'/home/articles',
                 component: LazyHigher(lazy(() => import(/*webpackChunkName:"views-articles"*/'../views/home/articles')))
+            },
+            {
+                redirect: '/home/index'
             }
         ]
     },

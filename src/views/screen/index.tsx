@@ -5,19 +5,14 @@ const Screen = () => {
     const { push } = useHistory()
     const [opacity,setOpacity] = useState(10)
     useEffect(() => {
-        setTimeout(() => {
-            push('/home')
-        },2000)
-    })
-    useEffect(() => {
-        setTimeout(() => {
+        window.onload = () => {
             setOpacity(0)
-        })
-
-        return () => {
-
+            setTimeout(() => {
+                push('/home')
+            },2000)
         }
     })
+
     return <div className="views-screen" style={{ opacity: opacity / 10 }}>
         <img src={ require('@/asserts/images/first-page.png') } alt=""/>
     </div>
