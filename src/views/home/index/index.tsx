@@ -1,6 +1,8 @@
-import React from "react"
+import React, {memo, useCallback} from "react"
 import AwesomeSwiper from 'react-awesome-swiper'
+import Avatar from "@/components/Avatar"
 import Image from "@/components/Image"
+import {useHistory} from "react-router";
 const config: any = {
     effect: 'coverflow',
     grabCursor: true,
@@ -15,12 +17,16 @@ const config: any = {
     },
 
 };
-const Index = () => {
+const Index = memo(() => {
+    const { push } = useHistory()
+    const toProfile = useCallback(() => {
+        push('/profile')
+    },[])
     return <article className="home-index">
         <header className="header">
             <p className="phrase">Hi,today</p>
             <h1 className="lately-user">Lately user</h1>
-            <span className="user">
+            <span className="user" onClick={ toProfile }>
                 <i className="icon iconfont iconuser" />
             </span>
         </header>
@@ -30,15 +36,21 @@ const Index = () => {
         <section className="lately-users">
             <ul className="users">
                 <li className="item">
-                    <div className="user"><Image className="user-avatar" src="1"/></div>
+                    <div className="user">
+                        <Avatar src={''} radius={ '5vw' } iScale={ .85 } oScale={ .95 }/>
+                    </div>
                     <p className="username">email</p>
                 </li>
                 <li className="item">
-                    <div className="user"><Image className="user-avatar" src="1"/></div>
+                    <div className="user">
+                        <Avatar src={''} radius={ '5vw' } iScale={ .85 } oScale={ .95 }/>
+                    </div>
                     <p className="username">email</p>
                 </li>
                 <li className="item">
-                    <div className="user"><Image className="user-avatar" src="1"/></div>
+                    <div className="user">
+                        <Avatar src={''} radius={ '5vw' } iScale={ .85 } oScale={ .95 }/>
+                    </div>
                     <p className="username">email</p>
                 </li>
             </ul>
@@ -98,5 +110,5 @@ const Index = () => {
 
         </section>
     </article>
-}
+})
 export default Index

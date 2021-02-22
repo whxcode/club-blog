@@ -10,7 +10,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="修改 README.md 自述文件" />
+    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="优化样式">
+      <change afterPath="$PROJECT_DIR$/src/components/Avatar/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Avatar/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/profile/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/profile/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Image/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/index/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index/index.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Avatar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -66,35 +76,22 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
-    <property name="ts.external.directory.path" value="D:\react-app\rain\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\react-app\ClubBlog\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\react-app\ClubBlog\src\components\Avatar" />
       <recent name="D:\react-app\rain\src\views\home\index" />
       <recent name="D:\react-app\rain\src\views\Login" />
       <recent name="D:\react-app\rain\src" />
       <recent name="D:\front_study\bulk-person-star\src" />
-      <recent name="D:\front_study\bulk-person-star" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\react-app\rain\src\asserts\images\placeholder" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
-    <configuration name="server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/mock/server.js" working-dir="$PROJECT_DIR$/mock">
-      <method v="2" />
-    </configuration>
-    <configuration name="eject" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="eject" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -108,8 +105,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
-        <item itemvalue="Node.js.server.js" />
-        <item itemvalue="npm.eject" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +133,10 @@
       <workItem from="1613788055569" duration="1393000" />
       <workItem from="1613789857910" duration="21387000" />
       <workItem from="1613815589852" duration="246000" />
-      <workItem from="1613815861506" duration="808000" />
+      <workItem from="1613815861506" duration="1108000" />
+      <workItem from="1613819828228" duration="9000" />
+      <workItem from="1613956023474" duration="462000" />
+      <workItem from="1613956738590" duration="3046000" />
     </task>
     <task id="LOCAL-00001" summary="1、完成登录、首页、编辑文章、文章列表页面。">
       <created>1613815644503</created>
@@ -175,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613816376630</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="优化样式">
+      <created>1613816959559</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613816959559</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +213,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1、完成登录、首页、编辑文章、文章列表页面。" />
     <MESSAGE value="修改 README.md 自述文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改 README.md 自述文件" />
+    <MESSAGE value="优化样式" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化样式" />
   </component>
 </project>

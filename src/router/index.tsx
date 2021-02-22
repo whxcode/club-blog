@@ -5,7 +5,8 @@ import FourZeroFour from "@/views/404"
 import LazyHigher from "@/components/LazyHigher"
 const Login = lazy(() => import(/*webpackChunkName:"views-login"*/'@/views/login'))
 const Screen = lazy(() => import(/*webpackChunkName:"views-screen"*/'@/views/screen'))
-const Plus = lazy(() => import(/*webpackChunkName:"views-plus"*/'../views/home/plus/index'))
+const Plus = lazy(() => import(/*webpackChunkName:"views-plus"*/'@/views/home/plus/index'))
+const Profile = lazy(() => import(/*webpackChunkName:"views-profile"*/'@/views/profile'))
 export interface RouterI {
     path?: string,
     meta?: any,
@@ -44,6 +45,10 @@ const routes: Array<RouterI> = [
     {
         path: '/login',
         component: LazyHigher(Login),
+    },
+    {
+        path: '/profile',
+        component: LazyHigher(Profile),
     },
     {
         path: '/404',
