@@ -3,11 +3,13 @@ import Home from "@/views/home"
 import Index from "@/views/home/index/index"
 import FourZeroFour from "@/views/404"
 import LazyHigher from "@/components/LazyHigher"
+;
 const Login = lazy(() => import(/*webpackChunkName:"views-login"*/'@/views/login'))
 const Screen = lazy(() => import(/*webpackChunkName:"views-screen"*/'@/views/screen'))
 const Plus = lazy(() => import(/*webpackChunkName:"views-plus"*/'@/views/home/plus/index'))
 const Profile = lazy(() => import(/*webpackChunkName:"views-profile"*/'@/views/profile'))
 const Story = lazy(() => import(/*webpackChunkName:"views-story"*/'@/views/story'))
+const Article = lazy(() => import(/*webpackChunkName:"views-article"*/'@/views/article'))
 export interface RouterI {
     path?: string,
     meta?: any,
@@ -54,6 +56,10 @@ const routes: Array<RouterI> = [
     {
         path: '/story',
         component: LazyHigher(Story),
+    },
+    {
+        path: '/article',
+        component: LazyHigher(Article),
     },
     {
         path: '/404',

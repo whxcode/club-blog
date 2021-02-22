@@ -64,7 +64,9 @@ const Index = memo(() => {
                 Latest News
             </div>
             <section className="articles">
-                <div className="article">
+                <div className="article" onClick={() => {
+                    push('/article')
+                }}>
                     <ArticleItem />
                 </div>
 
