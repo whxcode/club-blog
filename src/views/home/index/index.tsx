@@ -17,7 +17,7 @@ const config: any = {
         slideShadows: false,
     },
 
-};
+}
 const Index = memo(() => {
     const { push } = useHistory()
     const toProfile = useCallback(() => {
@@ -31,24 +31,11 @@ const Index = memo(() => {
                 <i className="icon iconfont iconuser" />
             </span>
         </header>
-        <section className="swip">
-
-        </section>
         <section className="lately-users">
             <ul className="users">
-                <li className="item">
-                    <div className="user">
-                        <Avatar src={''} radius={ '5vw' } iScale={ .85 } oScale={ .95 }/>
-                    </div>
-                    <p className="username">email</p>
-                </li>
-                <li className="item">
-                    <div className="user">
-                        <Avatar src={''} radius={ '5vw' } iScale={ .85 } oScale={ .95 }/>
-                    </div>
-                    <p className="username">email</p>
-                </li>
-                <li className="item">
+                <li className="item" onClick={() => {
+                    push('/profile')
+                }}>
                     <div className="user">
                         <Avatar src={''} radius={ '5vw' } iScale={ .85 } oScale={ .95 }/>
                     </div>
@@ -59,19 +46,16 @@ const Index = memo(() => {
         <section className="hots">
             <AwesomeSwiper config={config} className="your-classname">
                 <div className="swiper-wrapper">
-                    <div className="swiper-slide">
+                    <div className="swiper-slide" onClick={ () => {
+                        push('/story')
+                    } }>
                         <div className="hot">
                             <Image className="hot-card" src="https://ss1.bdstatic.com/70c1FuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3551370719,1936559374&fm=26&gp=0.jpg"/>
                             <p className="title">Tomorrow</p>
                         </div>
 
                     </div>
-                    <div className="swiper-slide">
-                        <div className="hot">
-                            <Image className="hot-card" src="https://ss1.bdstatic.com/70c1FuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3551370719,1936559374&fm=26&gp=0.jpg"/>
-                            <p className="title">Tomorrow</p>
-                        </div>
-                    </div>
+
                 </div>
             </AwesomeSwiper>
         </section>

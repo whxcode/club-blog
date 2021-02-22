@@ -7,6 +7,7 @@ const Login = lazy(() => import(/*webpackChunkName:"views-login"*/'@/views/login
 const Screen = lazy(() => import(/*webpackChunkName:"views-screen"*/'@/views/screen'))
 const Plus = lazy(() => import(/*webpackChunkName:"views-plus"*/'@/views/home/plus/index'))
 const Profile = lazy(() => import(/*webpackChunkName:"views-profile"*/'@/views/profile'))
+const Story = lazy(() => import(/*webpackChunkName:"views-story"*/'@/views/story'))
 export interface RouterI {
     path?: string,
     meta?: any,
@@ -49,6 +50,10 @@ const routes: Array<RouterI> = [
     {
         path: '/profile',
         component: LazyHigher(Profile),
+    },
+    {
+        path: '/story',
+        component: LazyHigher(Story),
     },
     {
         path: '/404',

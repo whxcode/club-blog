@@ -2,7 +2,9 @@ import React, {memo, MutableRefObject, useCallback, useEffect, useRef,RefObject}
 import Avatar from "@/components/Avatar"
 import './index.less'
 import ArticleItem from "@/components/ArctileIem";
+import {useHistory} from "react-router";
 const Profile = memo(() => {
+    const { goBack,push } = useHistory()
     const header = useRef<HTMLDivElement | null>(null)
     const onScroll = useCallback(() => {
         const top = header.current!.getBoundingClientRect().top
@@ -21,7 +23,12 @@ const Profile = memo(() => {
     return <article className="view-profile default-bg">
         <header className="top">
             <h1 className="title">Profile</h1>
-            <h1 className="more">...</h1>
+            <h1 className="more">
+                <span className="iconfont iconmenu"></span>
+                <span className="iconfont close iconclose" onClick={ () => {
+                    goBack()
+                } }></span>
+            </h1>
         </header>
         <section className="user-card">
             <div className="user-info">
