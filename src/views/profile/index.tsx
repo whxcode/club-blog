@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import Avatar from "@/components/Avatar"
 import './index.less'
 const Profile = memo(() => {
-    return <article className="view-profile">
+    return <article className="view-profile default-bg">
         <header className="top">
             <h1 className="title">Profile</h1>
             <h1 className="more">...</h1>
@@ -10,7 +10,7 @@ const Profile = memo(() => {
         <section className="user-card">
             <div className="user-info">
                 <div className="avatar">
-                    <Avatar src={''}/>
+
                 </div>
                 <div className="base">
                     <p className="email">@google.com</p>

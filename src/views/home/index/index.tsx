@@ -2,7 +2,8 @@ import React, {memo, useCallback} from "react"
 import AwesomeSwiper from 'react-awesome-swiper'
 import Avatar from "@/components/Avatar"
 import Image from "@/components/Image"
-import {useHistory} from "react-router";
+import ArticleItem from "@/components/ArctileIem"
+import {useHistory} from "react-router"
 const config: any = {
     effect: 'coverflow',
     grabCursor: true,
@@ -80,32 +81,17 @@ const Index = memo(() => {
             </div>
             <section className="articles">
                 <div className="article">
-                    <div className="left">
-                        <Image src="123" className="icon-cover"/>
-                    </div>
-                    <div className="base">
-                        <p className="title line-1">Big Dogs</p>
-                        <p className="description line-2">12321333333333333333333333333333333333333333333333333</p>
-                    </div>
+                    <ArticleItem />
                 </div>
+
                 <div className="article">
-                    <div className="left">
-                        <Image src="123" className="icon-cover"/>
-                    </div>
-                    <div className="base">
-                        <p className="title line-1">Big Dogs</p>
-                        <p className="description line-2">12321333333333333333333333333333333333333333333333333</p>
-                    </div>
+                    <ArticleItem />
                 </div>
+
                 <div className="article">
-                    <div className="left">
-                        <Image src="123" className="icon-cover"/>
-                    </div>
-                    <div className="base">
-                        <p className="title line-1">Big Dogs</p>
-                        <p className="description line-2">12321333333333333333333333333333333333333333333333333</p>
-                    </div>
+                    <ArticleItem />
                 </div>
+
             </section>
 
         </section>
