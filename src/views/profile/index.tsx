@@ -1,7 +1,23 @@
-import React, { memo } from 'react'
+import React, {memo, MutableRefObject, useCallback, useEffect, useRef,RefObject} from 'react'
 import Avatar from "@/components/Avatar"
 import './index.less'
+import ArticleItem from "@/components/ArctileIem";
 const Profile = memo(() => {
+    const header = useRef<HTMLDivElement | null>(null)
+    const onScroll = useCallback(() => {
+        const top = header.current!.getBoundingClientRect().top
+        if(top <= 0) {
+              header.current!.className = 'sticky-top posts-top'
+        } else {
+            header.current!.className = 'posts-top'
+        }
+    },[])
+    useEffect(() => {
+        window.addEventListener('scroll',onScroll)
+        return () => {
+            window.removeEventListener('scroll',onScroll)
+        }
+    },[])
     return <article className="view-profile default-bg">
         <header className="top">
             <h1 className="title">Profile</h1>
@@ -10,12 +26,12 @@ const Profile = memo(() => {
         <section className="user-card">
             <div className="user-info">
                 <div className="avatar">
-
+                    <Avatar src={ '' }/>
                 </div>
                 <div className="base">
-                    <p className="email">@google.com</p>
-                    <h1 className="name">Jovi Daniel</h1>
-                    <h2 className="vocation">designer</h2>
+                    <p className="email">@google.com@google.com@google.com</p>
+                    <h1 className="name">JoviJovi DanielJovi</h1>
+                    <p className="vocation">designer,it,teacher,farmer,postman,policeman</p>
                 </div>
             </div>
             <div className="about-me">
@@ -40,13 +56,38 @@ const Profile = memo(() => {
             </div>
         </section>
         <section className="posts">
-            <div className="posts-top">
+            <div className="posts-top" ref={ header }>
                 <h1 className="title">My Posts</h1>
                 <div className="tools">
-                    <span className="row">r</span>
-                    <span className="column">l</span>
+                    <span className="row iconfont iconmenu1 active"></span>
+                    <span className="column iconfont iconmenu"></span>
                 </div>
             </div>
+            <section className="articles">
+                <div className="article">
+                    <ArticleItem />
+                </div>
+
+                <div className="article">
+                    <ArticleItem />
+                </div>
+
+                <div className="article">
+                    <ArticleItem />
+                </div>
+                <div className="article">
+                    <ArticleItem />
+                </div>
+                <div className="article">
+                    <ArticleItem />
+                </div>
+                <div className="article">
+                    <ArticleItem />
+                </div>
+                <div className="article">
+                    <ArticleItem />
+                </div>
+            </section>
         </section>
     </article>
 })

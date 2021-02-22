@@ -10,15 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="封装 avatar(用户头像组件) 并添加 自述页面">
-      <change afterPath="$PROJECT_DIR$/src/components/ArctileIem/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ArctileIem/index.tsx" afterDir="false" />
+    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="封装 article-item(文章列表)组件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Avatar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Avatar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/index/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/profile/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/profile/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/profile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/profile/index.tsx" afterDir="false" />
     </list>
@@ -137,7 +131,7 @@
       <workItem from="1613815861506" duration="1108000" />
       <workItem from="1613819828228" duration="9000" />
       <workItem from="1613956023474" duration="462000" />
-      <workItem from="1613956738590" duration="6567000" />
+      <workItem from="1613956738590" duration="13192000" />
     </task>
     <task id="LOCAL-00001" summary="1、完成登录、首页、编辑文章、文章列表页面。">
       <created>1613815644503</created>
@@ -188,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613959955216</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="封装 article-item(文章列表)组件">
+      <created>1613963394938</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613963394938</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +224,8 @@
     <MESSAGE value="修改 README.md 自述文件" />
     <MESSAGE value="优化样式" />
     <MESSAGE value="封装 avatar(用户头像组件) 并添加 自述页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="封装 avatar(用户头像组件) 并添加 自述页面" />
+    <MESSAGE value="封装 article-item(文章列表)组件" />
+    <option name="LAST_COMMIT_MESSAGE" value="封装 article-item(文章列表)组件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
