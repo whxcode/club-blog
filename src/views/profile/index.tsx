@@ -7,6 +7,9 @@ import cn from "classnames";
 interface DiscoverProper {
     discovers: Array<{ title: string,data:string }>
 }
+function outLog() {
+
+}
 const Discover = memo((props: DiscoverProper) => {
     const  { discovers } = props
     const [active,setActive] = useState(0)
@@ -69,16 +72,22 @@ const Profile = memo(() => {
         <header className="top">
             <h1 className="title">Profile</h1>
             <h1 className="more">
-                <span className="iconfont iconmenu"></span>
+                <span className="iconfont iconlog-out" onClick={ () => {
+                    push('/login')
+                    outLog()
+                } }/>
                 <span className="iconfont close iconclose" onClick={ () => {
                     goBack()
-                } }></span>
+                } }/>
             </h1>
         </header>
         <section className="user-card">
             <div className="user-info">
                 <div className="avatar">
                     <Avatar src={ '' }/>
+                    <span className="setting iconfont iconsetting" onClick={ () => {
+                        push('/setting')
+                    } }/>
                 </div>
                 <div className="base">
                     <p className="email">@google.com@google.com@google.com</p>
