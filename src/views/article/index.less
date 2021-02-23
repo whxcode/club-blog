@@ -1,9 +1,15 @@
 .views-article {
+  background: #fff;
   padding-top: 20px;
   .title {
     padding: 0 40px;
     font-size: 24px;
     color: #0d253c;
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(2px);
+    z-index: 2;
+    position: sticky;
+    top: 0;
   }
   .user-info {
     margin: 20px 40px;
@@ -49,7 +55,7 @@
     max-height: 180px;
     overflow: hidden;
     img {
-      margin: 0 auto;
+      width: 100%;
     }
   }
   .summary {
@@ -104,7 +110,8 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 10px 10px 20px rgba(255,255,255,.5);
     backdrop-filter: blur(1px);
-    background:linear-gradient(rgba(0,0,0,0),rgba(255,255,255,1));
+    background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
   }
 }

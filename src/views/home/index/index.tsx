@@ -49,13 +49,20 @@ const Index = memo(() => {
                     <div className="swiper-slide" onClick={ () => {
                         push('/story')
                     } }>
-                        <div className="hot">
+                        <div className="hot" >
                             <Image className="hot-card" src="https://ss1.bdstatic.com/70c1FuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3551370719,1936559374&fm=26&gp=0.jpg"/>
                             <p className="title">Tomorrow</p>
                         </div>
-
                     </div>
 
+                    <div className="swiper-slide" onClick={ () => {
+                        push('/story')
+                    } }>
+                        <div className="hot" >
+                            <Image className="hot-card" src="https://ss1.bdstatic.com/70c1FuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3551370719,1936559374&fm=26&gp=0.jpg"/>
+                            <p className="title">Tomorrow</p>
+                        </div>
+                    </div>
                 </div>
             </AwesomeSwiper>
         </section>

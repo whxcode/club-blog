@@ -25,7 +25,7 @@ const Image = ({ src,alt,className }: Proper) => {
         <img className={ loading ? 'show' : 'hide' } src={ error ?  images[Math.trunc(Math.random() * images.length)] : src } alt={ alt } onError={ onError }
                  onLoad={ onLoading } />
         <div  className={ ['loading',loading ? 'hide' : 'show'].join(' ') }>
-            <span className="iconfont iconLoading"></span>
+            <span className="iconfont iconloading"></span>
         </div>
 
     </div>

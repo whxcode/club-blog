@@ -10,9 +10,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="完成文章详情页&#10;优化页面细节">
+    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="优化页面细节">
+      <change afterPath="$PROJECT_DIR$/src/components/LazyHigher/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpackDevServer.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpackDevServer.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/start.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Image/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LazyHigher/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LazyHigher/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/article/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/article/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/article/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/article/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/articles/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/articles/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/index/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/plus/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/plus/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +74,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/article" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -84,7 +98,17 @@
       <recent name="D:\react-app\rain\src\asserts\images\placeholder" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -98,6 +122,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -129,7 +154,9 @@
       <workItem from="1613815861506" duration="1108000" />
       <workItem from="1613819828228" duration="9000" />
       <workItem from="1613956023474" duration="462000" />
-      <workItem from="1613956738590" duration="26436000" />
+      <workItem from="1613956738590" duration="27393000" />
+      <workItem from="1613991515612" duration="16000" />
+      <workItem from="1614044967864" duration="5351000" />
     </task>
     <task id="LOCAL-00001" summary="1、完成登录、首页、编辑文章、文章列表页面。">
       <created>1613815644503</created>
@@ -208,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613984712965</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="优化页面细节">
+      <created>1613987839912</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1613987839912</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +281,8 @@
     <MESSAGE value="优化 profile(自术)页面" />
     <MESSAGE value="完成 story(故事页)&#10;优化页面" />
     <MESSAGE value="完成文章详情页&#10;优化页面细节" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成文章详情页&#10;优化页面细节" />
+    <MESSAGE value="优化页面细节" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化页面细节" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -255,7 +290,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/ArctileIem/index.tsx</url>
           <line>15</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

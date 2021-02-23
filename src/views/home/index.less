@@ -3,10 +3,9 @@
   min-height: 100vh;
   max-height: 100vh;
   background: linear-gradient(135deg,#ffffff, #f4f7ff);
-
   // 文章列表样式
   .home-articles {
-    // padding-top: 20px;
+    padding-top: 20px;
     padding-bottom: 65px;
     .moments {
       padding: 0 40px;
@@ -81,7 +80,9 @@
   }
   // 新增文章页面
   .home-plus {
+    height: calc(100vh - 40px);
     padding: 0 40px;
+    overflow-y: scroll;
     .header {
       padding: 20px 0;
       .title {
@@ -161,6 +162,7 @@
       box-shadow: 0 13px 13px 0 rgba(0,0,0,0.15);
       display: flex;
       align-items: center;
+
       .tool {
         height: 100%;
         display: flex;
@@ -186,6 +188,11 @@
           font-size: 24px;
         }
       }
+
+    }
+    .space-forty {
+      height: 40px;
+      // border: 1px solid red;
     }
   }
   // index 页面样式
@@ -193,13 +200,14 @@
     height: calc(100vh - 40px);
     overflow: scroll;
     padding: 0 0 25px;
+
     .header {
       // background: #fff
-    position: relative;
+      position: relative;
       padding: 20px 40px;
       z-index: 4;
       margin-right: 40px;
-       margin-top: 20px;
+       // margin-top: 20px;
       // position: sticky;
       // top: 0;
       .phrase {
@@ -251,6 +259,7 @@
       overflow-y: scroll;
       display: flex;
         .hot {
+
           margin: 0 40px;
           border-radius: 28px;
           width: 295px;
@@ -265,12 +274,15 @@
           }
           .hot-card {
             display: flex;
-
+            overflow: hidden;
+            border-radius: 28px;
             justify-content: center;
             align-items: center;
           }
           img {
+
             height: 100%;
+
           }
           .title {
             font-size: 18px;
@@ -286,7 +298,8 @@
             width: 100%;
             backdrop-filter: blur(.5px);
             bottom: 0;
-            background-image: linear-gradient(to top, rgb(128, 128, 128), transparent);
+            border-radius: 28px;
+            background-image: linear-gradient(to top, rgba(255,255, 255,.5), transparent);
             height: 30%;
           }
         }
