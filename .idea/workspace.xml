@@ -10,14 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="修改 profile 页面">
-      <change afterPath="$PROJECT_DIR$/src/views/setting/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/setting/index.tsx" afterDir="false" />
+    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="添加 setting 页面">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/profile/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/profile/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/profile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/profile/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/setting/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/setting/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/setting/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/setting/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +143,7 @@
       <workItem from="1613956023474" duration="462000" />
       <workItem from="1613956738590" duration="27393000" />
       <workItem from="1613991515612" duration="16000" />
-      <workItem from="1614044967864" duration="10597000" />
+      <workItem from="1614044967864" duration="12925000" />
     </task>
     <task id="LOCAL-00001" summary="1、完成登录、首页、编辑文章、文章列表页面。">
       <created>1613815644503</created>
@@ -254,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614052149590</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="添加 setting 页面">
+      <created>1614062291259</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1614062291259</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +298,8 @@
     <MESSAGE value="完成文章详情页&#10;优化页面细节" />
     <MESSAGE value="优化页面细节" />
     <MESSAGE value="修改 profile 页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改 profile 页面" />
+    <MESSAGE value="添加 setting 页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加 setting 页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
