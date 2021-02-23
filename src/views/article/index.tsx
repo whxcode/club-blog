@@ -79,7 +79,7 @@ const Article = memo(() => {
                 }
             />
         </div>
-        <div className="marsk"></div>
+        <div className="vague" />
     </article>
 })
 export default Article

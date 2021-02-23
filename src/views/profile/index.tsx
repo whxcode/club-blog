@@ -112,29 +112,21 @@ const Profile = memo(() => {
                 </div>
             </div>
             <section className="articles">
-                <div className="article">
-                    <ArticleItem />
-                </div>
-                <div className="article">
-                    <ArticleItem />
-                </div>
-                <div className="article">
-                    <ArticleItem />
-                </div>
-                <div className="article">
-                    <ArticleItem />
-                </div>
-                <div className="article">
-                    <ArticleItem />
-                </div>
-                <div className="article">
-                    <ArticleItem />
-                </div>
-                <div className="article">
-                    <ArticleItem />
-                </div>
+                {
+                    [1,2,3,4].map(i => {
+                        return <div className="article" key={ i }
+                            onClick={() => {
+                                push('/article?id='+i)
+                            }}
+                        >
+                            <ArticleItem />
+                        </div>
+                    })
+                }
             </section>
         </section>
+        <div className="vague" />
+
     </article>
 })
 export default Profile
