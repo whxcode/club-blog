@@ -1,8 +1,37 @@
-import React, {memo, MutableRefObject, useCallback, useEffect, useRef,RefObject} from 'react'
+import React, {memo, MutableRefObject, useCallback, useEffect, useRef, RefObject, useState} from 'react'
 import Avatar from "@/components/Avatar"
 import './index.less'
 import ArticleItem from "@/components/ArctileIem";
 import {useHistory} from "react-router";
+import cn from "classnames";
+interface DiscoverProper {
+    discovers: Array<{ title: string,data:string }>
+}
+const Discover = memo((props: DiscoverProper) => {
+    const  { discovers } = props
+    const [active,setActive] = useState(0)
+    return <>
+        <p className="exhaust">
+            <span>post:</span>
+            <span>412313</span>
+        </p>
+        <div className="discover">
+            {
+                discovers.map((item,index) => {
+                    return <div className={ cn('discover-card',{
+                        active: active === index
+                    }) } key={item.title}  onClick={() => {
+                        setActive(index)
+                    }
+                    }>
+                        <h1 className="number line-1">{ item.data }</h1>
+                        <p className="label">{ item.title }</p>
+                    </div>
+                })
+            }
+        </div>
+    </>
+})
 const Profile = memo(() => {
     const { goBack,push } = useHistory()
     const header = useRef<HTMLDivElement | null>(null)
@@ -14,6 +43,22 @@ const Profile = memo(() => {
             header.current!.className = 'posts-top'
         }
     },[])
+    const [discovers] = useState(() => {
+        return [
+            {
+                title: 'post',
+                data: '25k'
+            },
+            {
+                title: 'following',
+                data: '25k'
+            },
+            {
+                title: 'followers',
+                data: '2.5k'
+            },
+        ]
+    })
     useEffect(() => {
         window.addEventListener('scroll',onScroll)
         return () => {
@@ -47,20 +92,7 @@ const Profile = memo(() => {
                     Madison Blackstone is a director of user experience design, with experience managing global teams.
                 </div>
             </div>
-            <div className="discover">
-                <div className="post">
-                    <h1 className="number">52</h1>
-                    <p className="label">Post</p>
-                </div>
-                <div className="following">
-                    <h1 className="number">52</h1>
-                    <p className="label">following</p>
-                </div>
-                <div className="followers">
-                    <h1 className="number">4.5k</h1>
-                    <p className="label">followers</p>
-                </div>
-            </div>
+            <Discover discovers={ discovers }/>
         </section>
         <section className="posts">
             <div className="posts-top" ref={ header }>
