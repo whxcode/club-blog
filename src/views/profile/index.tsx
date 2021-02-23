@@ -54,7 +54,7 @@ const Profile = memo(() => {
             },
             {
                 title: 'following',
-                data: '2145k'
+                data: '211345k'
             },
             {
                 title: 'followers',
