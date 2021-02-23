@@ -15,8 +15,8 @@ const Discover = memo((props: DiscoverProper) => {
     const [active,setActive] = useState(0)
     return <>
         <p className="exhaust">
-            <span>post:</span>
-            <span>412313</span>
+            <span>{ discovers[active].title }:</span>
+            <span>{ discovers[active].data }</span>
         </p>
         <div className="discover">
             {
@@ -54,7 +54,7 @@ const Profile = memo(() => {
             },
             {
                 title: 'following',
-                data: '25k'
+                data: '2145k'
             },
             {
                 title: 'followers',
@@ -62,6 +62,7 @@ const Profile = memo(() => {
             },
         ]
     })
+    const [browserShape,setBrowserShape] = useState(0)
     useEffect(() => {
         window.addEventListener('scroll',onScroll)
         return () => {
@@ -106,11 +107,16 @@ const Profile = memo(() => {
         <section className="posts">
             <div className="posts-top" ref={ header }>
                 <h1 className="title">My Posts</h1>
-                <div className="tools">
-                    <span className="row iconfont iconmenu1 active"></span>
-                    <span className="column iconfont iconmenu"></span>
-                </div>
+                {/*<div className="tools">
+                    <span  onClick={() => { setBrowserShape(1) }} className={ cn("row iconfont iconmenu1",{
+                        active: browserShape === 1
+                    }) } />
+                    <span onClick={() => { setBrowserShape(0) }}  className={ cn("column iconfont iconmenu",{
+                        active: browserShape === 0
+                    }) }/>
+                </div>*/}
             </div>
+
             <section className="articles">
                 {
                     [1,2,3,4].map(i => {
@@ -124,9 +130,9 @@ const Profile = memo(() => {
                     })
                 }
             </section>
+
         </section>
         <div className="vague" />
-
     </article>
 })
 export default Profile
