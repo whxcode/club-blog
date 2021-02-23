@@ -106,11 +106,9 @@ const Profile = memo(() => {
                 <div className="article">
                     <ArticleItem />
                 </div>
-
                 <div className="article">
                     <ArticleItem />
                 </div>
-
                 <div className="article">
                     <ArticleItem />
                 </div>

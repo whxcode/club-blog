@@ -11,7 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="优化页面细节">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/profile/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/profile/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/profile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/profile/index.tsx" afterDir="false" />
     </list>
@@ -143,7 +142,7 @@
       <workItem from="1613956023474" duration="462000" />
       <workItem from="1613956738590" duration="27393000" />
       <workItem from="1613991515612" duration="16000" />
-      <workItem from="1614044967864" duration="6614000" />
+      <workItem from="1614044967864" duration="7004000" />
     </task>
     <task id="LOCAL-00001" summary="1、完成登录、首页、编辑文章、文章列表页面。">
       <created>1613815644503</created>
@@ -236,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614050520733</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="优化页面细节">
+      <created>1614051712949</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614051712949</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,16 +283,5 @@
     <MESSAGE value="完成文章详情页&#10;优化页面细节" />
     <MESSAGE value="优化页面细节" />
     <option name="LAST_COMMIT_MESSAGE" value="优化页面细节" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/ArctileIem/index.tsx</url>
-          <line>15</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
