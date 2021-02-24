@@ -71,7 +71,7 @@ const routes: Array<RouterI> = [
         component: FourZeroFour
     },
     {
-        redirect: '/screen'
+        redirect: '/home'
     }
 ]
 export default routes

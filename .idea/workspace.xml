@@ -10,9 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="优化页面细节。">
+    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="将文章详情页面改为瀑布流布局。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/profile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/profile/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../train-ticket" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/asserts/images/test" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,11 +73,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\react-app\ClubBlog\src\asserts\images\test" />
       <recent name="D:\react-app\ClubBlog\src\views\article" />
       <recent name="D:\react-app\ClubBlog\src\components\Avatar" />
       <recent name="D:\react-app\rain\src\views\home\index" />
       <recent name="D:\react-app\rain\src\views\Login" />
-      <recent name="D:\react-app\rain\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\react-app\rain\src\asserts\images\placeholder" />
@@ -142,7 +141,7 @@
       <workItem from="1613956023474" duration="462000" />
       <workItem from="1613956738590" duration="27393000" />
       <workItem from="1613991515612" duration="16000" />
-      <workItem from="1614044967864" duration="18569000" />
+      <workItem from="1614044967864" duration="21246000" />
     </task>
     <task id="LOCAL-00001" summary="1、完成登录、首页、编辑文章、文章列表页面。">
       <created>1613815644503</created>
@@ -270,7 +269,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614068781638</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="优化页面细节">
+      <created>1614070108522</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1614070108522</updated>
+    </task>
+    <task id="LOCAL-00020" summary="将文章详情页面改为瀑布流布局。">
+      <created>1614072725412</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1614072725412</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,12 +322,13 @@
     <MESSAGE value="优化 profile(自术)页面" />
     <MESSAGE value="完成 story(故事页)&#10;优化页面" />
     <MESSAGE value="完成文章详情页&#10;优化页面细节" />
-    <MESSAGE value="优化页面细节" />
     <MESSAGE value="修改 profile 页面" />
     <MESSAGE value="添加 setting 页面" />
     <MESSAGE value="优化 setting 界面" />
     <MESSAGE value="优化页面细节。" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化页面细节。" />
+    <MESSAGE value="优化页面细节" />
+    <MESSAGE value="将文章详情页面改为瀑布流布局。" />
+    <option name="LAST_COMMIT_MESSAGE" value="将文章详情页面改为瀑布流布局。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
