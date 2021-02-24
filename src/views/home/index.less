@@ -97,7 +97,7 @@
   }
   // 新增文章页面
   .home-plus {
-    height: calc(100vh - 40px);
+    // height: calc(100vh - 40px);
     padding: 0 40px;
     overflow-y: scroll;
     .header {
@@ -124,13 +124,14 @@
     }
     .tags {
       display: flex;
+      align-items: center;
       flex-flow: wrap;
       font-size: 20px;
       color: #376AED;
-      margin: 32px 0;
+      margin:  0;
       .tag {
         border: 1px solid #376AED;;
-        margin-left: 10px;
+        margin: 5px 2px;
         padding: 0 0 0 16px;
         border-radius: 77px;
         font-size: 14px;
@@ -141,13 +142,19 @@
           align-items: center;
           justify-content: center;
           margin:2px 2px 2px 5px;
-          transform: rotateZ(45deg);
           width: 24px;
           height: 24px;
           font-weight: 700;
           opacity: 1;
           background: rgba(55,106,237,0.15);
           border-radius: 50%;
+          .iconfont {
+            font-size: 16px;
+          }
+        }
+        .remove.checked {
+          background: @red;
+          color: #fff;
         }
       }
     }
@@ -159,20 +166,31 @@
         margin-bottom: 4px;
       }
       .content {
-
         padding-top: 16px;
         font-size: 16px;
         font-weight: 500;
-        max-height: 280px;
+        max-height: 320px;
         overflow-y: scroll;
         text-align: LEFT;
         color: #0d253c;
+
         line-height: 20px;
+        caret-color: @black;
+        min-width: 100%;
+        &:empty:before{
+          content: 'plase,say some?';
+          color: #7B8BB2;
+          font-size: 14px;
+        }
+        // padding-bottom: 40px;
       }
     }
     .tools {
+      position: fixed;
       margin-top: 10px;
       height: 48px;
+      bottom: 65px;
+      width: calc(100% - 80px);
       opacity: 1;
       background: #0d253c;
       border-radius: 60px;
@@ -409,5 +427,42 @@
     a:active {
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
+  }
+
+  // 新增链接样式
+  .modal-new-link {
+    width: 240px;
+    border-radius: 6px;
+    padding: 10px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    .title,.send {
+      font-size: 18px;
+      color: @black;
+    }
+    .send {
+      text-align: center;
+    }
+    .container {
+      margin: 5px 0 10px;
+      input {
+        color: #7B8BB2;
+        font-size: 16px;
+        padding: 5px 0;
+      }
+    }
+  }
+  // 弹出框样式
+  .mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 222;
+    background: rgba(0,0,0,.5);
   }
 }
