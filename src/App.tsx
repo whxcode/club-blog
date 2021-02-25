@@ -14,10 +14,10 @@ const RouterMaps = ({ routes }: any) => {
                     if(redirect) {
                         return <Redirect to={ redirect }/>
                     }
-                    const user = Store.get('userInfo')
-                    if(!user && !whiteNames.includes(item.path)) {
-                        return <Redirect to={ '/login' }/>
-                    }
+                    // const user = Store.get('userInfo')
+                    // if(!user && !whiteNames.includes(item.path)) {
+                       //  return <Redirect to={ '/login' }/>
+                    // }
                     // @ts-ignore
                     return <Component { ...{ routes: item.routes } }>
                         { item.routes && <RouterMaps routes={ item.routes }/> }

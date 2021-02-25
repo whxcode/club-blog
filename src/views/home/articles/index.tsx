@@ -78,7 +78,7 @@ const Articles = memo(() => {
                     list.length + 4,
                     list.length + 5,
                 ])
-            },100000)
+            },2000)
 
         }
 

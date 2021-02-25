@@ -52,7 +52,7 @@ const Form = memo((props: Former) => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
-            push('/')
+            push('/home/index')
         },1000)
         onLogin(userInfo)
     }

@@ -10,22 +10,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="完成登录页面交互。&#10;添加后端相关目录">
-      <change afterPath="$PROJECT_DIR$/Serve/src/config/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Serve/src/controller/assets.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Serve/src/controller/file.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Serve/src/data/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Serve/src/data/serve.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Serve/src/data/struct.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Serve/src/local/permission.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Serve/src/local/user.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Serve/src/model/core.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Serve/src/public/img/1612408352372705100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Serve/src/sqls/uesrs.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Serve/src/util/index.go" afterDir="false" />
+    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="优化文案">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Serve/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/Serve/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Serve/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Serve/src/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paths.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/paths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/articles/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/articles/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +70,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/asserts/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -97,7 +94,7 @@
       <recent name="D:\react-app\rain\src\asserts\images\placeholder" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -120,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +157,9 @@
       <workItem from="1614164632753" duration="9000" />
       <workItem from="1614214245250" duration="1021000" />
       <workItem from="1614217322339" duration="8823000" />
-      <workItem from="1614231407781" duration="11279000" />
+      <workItem from="1614231407781" duration="13415000" />
+      <workItem from="1614246894012" duration="49000" />
+      <workItem from="1614246944439" duration="1784000" />
     </task>
     <task id="LOCAL-00001" summary="1、完成登录、首页、编辑文章、文章列表页面。">
       <created>1613815644503</created>
@@ -330,7 +329,28 @@
       <option name="project" value="LOCAL" />
       <updated>1614241506808</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="更新服务端代码">
+      <created>1614243554382</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1614243554382</updated>
+    </task>
+    <task id="LOCAL-00026" summary="更新 readme.md 文案。">
+      <created>1614243928415</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1614243928415</updated>
+    </task>
+    <task id="LOCAL-00027" summary="优化文案">
+      <created>1614244113792</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1614244113792</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,17 +399,9 @@
     <MESSAGE value="完善新增文章页面" />
     <MESSAGE value="优化界面" />
     <MESSAGE value="完成登录页面交互。&#10;添加后端相关目录" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成登录页面交互。&#10;添加后端相关目录" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/router/index.tsx</url>
-          <line>31</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="更新服务端代码" />
+    <MESSAGE value="更新 readme.md 文案。" />
+    <MESSAGE value="优化文案" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化文案" />
   </component>
 </project>
