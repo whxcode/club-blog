@@ -1,5 +1,23 @@
-import React, {memo, useCallback, useEffect, useMemo, useRef, useState} from "react"
+import React, {
+    ChangeEvent,
+    createContext,
+    memo,
+    useCallback,
+    useContext,
+    useEffect,
+    useMemo,
+    useRef,
+    useState
+} from "react"
 import cn from 'classnames'
+function createDownloadFile(file: File) {
+    var blob = new Blob([file]);
+    return URL.createObjectURL(blob);
+}
+const InputContext = createContext({
+    title: '',
+    summary: '',
+})
 
 interface localTagSigner {
     active: boolean,
@@ -14,71 +32,29 @@ interface localTagProper extends localTagSigner {
 }
 
 interface EditContentProper {
-
+    tags: Array<any>
 }
 
-var lastEditRange: any = null
-function editModify({ label,href }: { label: string, href: string }) {
 
-        // 获取编辑框对象
-        var edit: any = document.getElementById('editContent')
-        // 获取输入框对象
+function editModify(ele: HTMLElement) {
+    const edit:any = document.querySelector('#editContent')
+    const selection: any = window.getSelection()
+    edit.appendChild(ele)
 
-        edit.focus()
-        // 获取选定对象
-        var selection: any = getSelection()
-        // 判断是否有最后光标对象存在
+    // 创建新的光标对象
+    var range = document.createRange()
+    console.log(range)
+    // 光标对象的范围界定为新建的表情节点
+    range.selectNodeContents(edit)
+    // 光标位置定位在表情节点的最大长度
+    range.setStart(edit,edit.childNodes.length)
+    // 使光标开始和光标结束重叠
+    range.collapse(true)
+    // 清除选定对象的所有光标对象
+    selection.removeAllRanges()
+    // 插入新的光标对象
+    selection.addRange(range)
 
-        // 判断选定对象范围是编辑框还是文本节点
-        if(lastEditRange) {
-            selection.removeAllRanges()
-            selection.addRange(lastEditRange)
-        }
-        var a = document.createElement('a')
-        a.contentEditable = 'false'
-
-        a.innerText = label
-        a.href = href
-
-        if (selection.anchorNode.nodeName !== '#text') {
-            // 如果是编辑框范围。则创建表情文本节点进行插入
-
-            // 否则直接插入一个表情元素
-            edit.appendChild(a)
-            // 创建新的光标对象
-            var range = document.createRange()
-            // 光标对象的范围界定为新建的表情节点
-            range.selectNodeContents(edit)
-
-            // 光标位置定位在表情节点的最大长度
-            range.setStart(edit,edit.childNodes.length)
-            // range.setEnd(edit,)
-            // 使光标开始和光标结束重叠
-            range.collapse(true)
-            // 清除选定对象的所有光标对象
-            selection.removeAllRanges()
-            // 插入新的光标对象
-            selection.addRange(range)
-        }
-        else {
-            // @ts-ignore
-            var range: any = selection.getRangeAt(0)
-            // 获取光标对象的范围界定对象，一般就是textNode对象
-            var textNode: any = range.startContainer;
-            // 获取光标位置
-            var rangeStartOffset = range.startOffset;
-            console.log(rangeStartOffset)
-            textNode.parentNode.appendChild(a)
-            range.setStart(textNode.parentNode, textNode.parentNode.childNodes.length)
-
-            range.collapse(true)
-            //  range.setEndAfter(edit)
-            // 清除选定对象的所有光标对象
-            selection.removeAllRanges()
-            // 插入新的光标对象
-            selection.addRange(range)
-        }
-        lastEditRange = selection.getRangeAt(0)
 }
 
 const ModalNewLink = memo((props: any) => {
@@ -88,15 +64,17 @@ const ModalNewLink = memo((props: any) => {
     const onClick = useCallback(() => {
         const label = refLabel.current!.value
         const href = refLink.current!.value
-        editModify({
-            label,href
-        })
+        const a = document.createElement('a')
+        a.innerText = label
+        a.href = href
+        a.contentEditable = "false"
+        editModify(a)
     },[])
     return <div className="modal-new-link"   onClick={(e) => e.stopPropagation()}>
         <p className="title">新增链接</p>
         <div className="container">
-            <input  ref={ refLabel }  type="text" className="container-label" placeholder="请输入内容"/>
-            <input  ref={ refLink }  type="text" className="container-link" placeholder="请输入链接"/>
+            <input  ref={ refLabel } value={ 'google' }  type="text" className="container-label" placeholder="请输入内容"/>
+            <input  ref={ refLink }  value={ 'google' } type="text" className="container-link" placeholder="请输入链接"/>
         </div>
         <p className="send" onClick={ () => {
             onClick()
@@ -106,32 +84,74 @@ const ModalNewLink = memo((props: any) => {
 })
 
 const EditContent = memo((props: EditContentProper) => {
-    const [visible,setVisible] = useState(true)
+    const { tags } = props
+    const [visible,setVisible] = useState(false)
+    const abstract = useContext(InputContext)
+
     const instance = useRef<HTMLDivElement>(null)
+    const photoControl = useRef<HTMLInputElement>(null)
+    const CoverControl = useRef<HTMLInputElement>(null)
+    const [cover,setCover] = useState('')
     const onSave = useCallback(() => {
         const content = instance.current!
-        console.log(content.innerHTML)
-    }, [])
+        const marks = tags.filter(tag => tag.active).map(tag => tag.content)
+        const params = {
+            ...abstract,
+            tags: marks,
+            content: content.innerHTML,
+            cover
+        }
 
+        console.log(params)
+
+    }, [abstract,cover])
+    function onChangePhoto(e: ChangeEvent<HTMLInputElement>) {
+        const file = e.target.files![0]
+        const url = createDownloadFile(file)
+        const img = document.createElement('img')
+        img.src = url
+        if(!cover) {
+            setCover(url)
+        }
+        editModify(img)
+        e.target.value = ''
+    }
+    function onChangeCover(e: ChangeEvent<HTMLInputElement>) {
+        const file = e.target.files![0]
+        const url = createDownloadFile(file)
+        setCover(url)
+    }
 
     return <>
         <div className="content"
              id="editContent"
              ref={ instance }
              contentEditable={true}
-             suppressContentEditableWarning
 
+             suppressContentEditableWarning
         />
         <section className="tools">
-            <div className="tool ">
-                <span className=" upload-cover iconfont icondraws"/>
+            <div className="tool" onClick={
+                () => {  CoverControl.current!.click()  }
+            } >
+                { cover ?
+                    <img src={ cover } alt=""/>
+                    :
+                    <span className=" upload-cover iconfont icondraws"/>
+                }
+                <input  ref={ CoverControl } type="file" onChange={ onChangeCover }
+                        className="hidden"/>
             </div>
-            <div className="tool photo">
+            <div className="tool photo" onClick={() => {
+                photoControl.current!.click()
+            }}>
                 <span className="iconfont iconphoto"/>
+                <input  ref={ photoControl } type="file" onChange={ onChangePhoto }
+                        className="hidden"/>
             </div>
 
             <div className="tool" onClick={onSave}>
-                <span className=" upload-cover iconfont icondraws"/>
+                <span className=" upload-cover iconfont iconSave"/>
             </div>
 
             <div className="tool video">
@@ -175,39 +195,49 @@ const Tag = (props: localTagProper) => {
         </span>
     </div>
 }
+
 const Plus = () => {
     const [tags, setTags] = useState([
         {
             active: false,
-            content: 'art'
+            content: 'js'
         },
         {
             active: false,
-            content: 'art'
+            content: 'c'
         },
         {
             active: false,
-            content: 'art'
+            content: 'go'
         },
         {
             active: false,
-            content: 'art'
+            content: 'php'
         }
     ])
+    const [abstract,setAbstract] = useState({
+        title: '',
+        summary: '',
+    })
     const update = (index: number, active: boolean) => {
         const newTags = [...tags]
         newTags[index].active = active
         setTags(newTags)
     }
-
+    const onChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+        setAbstract({
+            ...abstract,
+            [e.target.name]: e.target.value
+        })
+    },[abstract])
 
     return <article className="home-plus">
         <header className="header">
             <div className="title">
-                <input type="text" name="title" placeholder="title,please"/>
+                <input type="text"   value={ abstract.title } name="title" placeholder="title,please" onChange={ onChange }/>
             </div>
             <div className="simple">
-                <input type="text" name="simple" placeholder="simple,please"/>
+                <input type="text"  value={ abstract.summary } name="summary" placeholder="summary,please"  onChange={ onChange }/>
             </div>
         </header>
         <section className="tags">
@@ -223,7 +253,9 @@ const Plus = () => {
         </section>
         <section className="body">
             <div className="label">Article Content</div>
-            <EditContent/>
+            <InputContext.Provider value={ abstract }>
+                <EditContent tags={ tags }/>
+            </InputContext.Provider>
         </section>
     </article>
 }

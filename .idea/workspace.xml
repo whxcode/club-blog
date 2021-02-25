@@ -10,11 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="屏蔽 screen 页面">
+    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="完善新增文章页面">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/home/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/home/plus/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/plus/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../front_study" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../front_study/other" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -145,7 +147,10 @@
       <workItem from="1613956738590" duration="27393000" />
       <workItem from="1613991515612" duration="16000" />
       <workItem from="1614044967864" duration="21246000" />
-      <workItem from="1614127757768" duration="14806000" />
+      <workItem from="1614127757768" duration="17700000" />
+      <workItem from="1614164632753" duration="9000" />
+      <workItem from="1614214245250" duration="1021000" />
+      <workItem from="1614217322339" duration="3429000" />
     </task>
     <task id="LOCAL-00001" summary="1、完成登录、首页、编辑文章、文章列表页面。">
       <created>1613815644503</created>
@@ -294,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614128007761</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="完善新增文章页面">
+      <created>1614158536082</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1614158536082</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +352,8 @@
     <MESSAGE value="优化页面细节" />
     <MESSAGE value="将文章详情页面改为瀑布流布局。" />
     <MESSAGE value="屏蔽 screen 页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="屏蔽 screen 页面" />
+    <MESSAGE value="完善新增文章页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善新增文章页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

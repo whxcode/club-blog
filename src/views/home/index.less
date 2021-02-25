@@ -166,17 +166,21 @@
         margin-bottom: 4px;
       }
       .content {
-        padding-top: 16px;
+        padding: 16px;
         font-size: 16px;
         font-weight: 500;
         max-height: 320px;
         overflow-y: scroll;
         text-align: LEFT;
         color: #0d253c;
-
+        min-height: 100px;
         line-height: 20px;
         caret-color: @black;
         min-width: 100%;
+        img {
+          width: 100%;
+          margin: 0 auto;
+        }
         &:empty:before{
           content: 'plase,say some?';
           color: #7B8BB2;
@@ -201,11 +205,16 @@
       .tool {
         height: 100%;
         display: flex;
-
+overflow: hidden;
         justify-content: center;
         align-items: center;
         color: #fff;
         flex: 1;
+        img {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+        }
         .upload-cover {
 
           padding: 5px;
