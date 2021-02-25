@@ -1,0 +1,17 @@
+{
+  "mysql": {
+    "host": "localhost",
+    "port": "3306",
+    "user": "root",
+    "password": "root",
+    "data": "blog",
+    "other": "?charset=utf8mb4&parseTime=True"
+  },
+  "assets": {
+    "public": "D:\\react-app\\ClubBlog\\Serve\\src\\public",
+    "host": ":8001"
+  },
+  "server": {
+    "addr": ":8000"
+  }
+}

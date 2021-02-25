@@ -10,24 +10,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="优化界面">
-      <change afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/user/actions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/user/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/regexp.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/request.ts" afterDir="false" />
+    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="完成登录页面交互。&#10;添加后端相关目录">
+      <change afterPath="$PROJECT_DIR$/Serve/src/config/index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serve/src/controller/assets.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serve/src/controller/file.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serve/src/data/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serve/src/data/serve.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serve/src/data/struct.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serve/src/local/permission.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serve/src/local/user.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serve/src/model/core.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serve/src/public/img/1612408352372705100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serve/src/sqls/uesrs.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serve/src/util/index.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asserts/images/Google.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/asserts/images/Google.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/articles/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/articles/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/login/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serve/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/Serve/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serve/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Serve/src/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +160,7 @@
       <workItem from="1614164632753" duration="9000" />
       <workItem from="1614214245250" duration="1021000" />
       <workItem from="1614217322339" duration="8823000" />
-      <workItem from="1614231407781" duration="9967000" />
+      <workItem from="1614231407781" duration="11279000" />
     </task>
     <task id="LOCAL-00001" summary="1、完成登录、首页、编辑文章、文章列表页面。">
       <created>1613815644503</created>
@@ -325,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614220824676</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="完成登录页面交互。&#10;添加后端相关目录">
+      <created>1614241506808</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1614241506808</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +378,8 @@
     <MESSAGE value="屏蔽 screen 页面" />
     <MESSAGE value="完善新增文章页面" />
     <MESSAGE value="优化界面" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化界面" />
+    <MESSAGE value="完成登录页面交互。&#10;添加后端相关目录" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成登录页面交互。&#10;添加后端相关目录" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
