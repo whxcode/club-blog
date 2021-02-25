@@ -1,8 +1,8 @@
 .views-login {
   min-height: 100vh;
   max-height: 100vh;
-  background: #fff;
-  overflow: hidden;
+  background:@white;
+  // overflow: hidden;
   padding-top: 30px;
   .title {
     font-size: 24px;
@@ -11,29 +11,30 @@
     .club {
       padding: 5px;
       text-space: 10px;
-      background: #376aed;
+      background: @blue;
       border-radius: 6px;
       letter-spacing: 10px;
-      color: #fff;
+      color: @white;
     }
     .blog {
       margin-top: 10px;
       text-indent: 10px;
       letter-spacing: 10px;
       display: block;
-      color: #376aed;
+      color: @blue;
     }
   }
   .welcome {
     height: 96px;
-    margin-top: 8.53vw  /* 32/3.75 */;
+    margin-top: 10px;
     opacity: 1;
-    background: #376aed;
+    background: @blue;
     border-top-left-radius: 28px;
     border-top-right-radius: 28px;
     box-shadow: 0 4px 22px 0 rgba(79,91,121,0.10);
     color: #fff;
     display: flex;
+    font-size: 24px;
     padding-top: 24px;
     justify-content: center;
   }
@@ -46,11 +47,11 @@
     .notice {
       .text {
         font-size: 24px;
-        color: #0d253c;
+        color: @light-blue;
       }
       .brief {
         font-size: 14px;
-        color: #2d4379;
+        color: @light-blue;
         margin: 12px 0 37px;
       }
     }
@@ -59,21 +60,30 @@
       flex-flow: column;
       position: relative;
       .label {
-        color: #2d4379;
+        color: @light-blue;
         font-size: 14px;
         font-family: Avenir, Avenir-Roman;
       }
       #username,#password {
         margin: 12px 0;
-        color: #0d253c;
+        color: @black;
         font-size: 16px;
+      }
+      #password{
+        // font-size: 24px;
       }
       .conceal {
         position: absolute;
         bottom: 16px;
-        color: #376aed;
+        top: 50%;
+        transform: translateY(-50%);
+        color: @blue;
         font-size: 14px;
         right: 0;
+      }
+      .note {
+        font-size: 12px;
+        color: @red;
       }
     }
     .submit {
@@ -82,11 +92,19 @@
         width: 295px;
         height: 60px;
         opacity: 1;
-        background: #376aed;
+        background: @blue;
         border-radius: 12px;
         font-size: 16px;
-        color: #fff;
+        color: @white;
         font-weight: 700;
+        transition: all .2s;
+        .iconfont {
+          font-size: 26px;
+        }
+      }
+      .button.loading {
+        background: radial-gradient(lighten(@blue,10%) 50%  ,lighten(@blue,5%));
+        color: darken(@white,5%)
       }
     }
     .margin-top-twenty {
@@ -101,14 +119,14 @@
     margin-top: 20px;
     transform: translateY(-32px);
     .forget {
-      color: #2D4379;
+      color: @light-blue;
       font-size: 14px;
       .reset {
-        color: #376AED;
+        color: @blue;
       }
     }
     .other-method {
-      color: #2D4379;
+      color: @light-blue;
       font-size: 14px;
       margin: 10px 0;
     }

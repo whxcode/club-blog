@@ -9,7 +9,7 @@ const RouterMaps = ({ routes }: any) => {
     return <Switch>
         {
             routes.map((item: RouterI) => {
-                return <Route path={ item.path } key={item.path} render={() => {
+                return <Route path={ item.path } key={ item.path || item.redirect } render={() => {
                     const { component: Component,redirect } = item
                     if(redirect) {
                         return <Redirect to={ redirect }/>

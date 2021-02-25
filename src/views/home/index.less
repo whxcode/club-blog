@@ -8,21 +8,27 @@
     padding-top: 20px;
     padding-bottom: 65px;
     .water-fall {
-      display: flex;
-      // border: 1px solid red;
-      .col {
-        flex: 1;
-        // border: 1px solid black;;
-        padding: 0 10px;
+      // display: flex;
+      padding: 0 10px;
+      column-count:2;
+      column-gap: 10px;
+      width: 100%;
         .item {
-          border-radius: 12px;
+          box-shadow: 0 13px 13px 0 rgba(0,0,0,0.05);
+          margin-bottom: 20px;
+           break-inside: avoid;
+          border-radius: 10px;
           overflow: hidden;
-          margin-bottom: 10px;
           img {
             width: 100%;
           }
+          p {
+            font-size: 16px;
+            color: @black;
+            text-align: center;
+          }
         }
-      }
+
     }
     .moments {
       padding: 0 40px;
@@ -91,6 +97,18 @@
             }
           }
         }
+
+      }
+    }
+    .loading {
+      text-align: center;
+      .wrapper {
+        display: inline-block;
+        animation: rotate 1s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+      }
+
+      .iconfont {
+        font-size: 16px;
 
       }
     }
@@ -474,4 +492,24 @@ overflow: hidden;
     z-index: 222;
     background: rgba(0,0,0,.5);
   }
+}
+
+@media screen and (min-width: 750px) {
+  .views-home {
+    border: 1px solid red;
+    .home-articles {
+      .water-fall {
+        // display: flex;
+
+        column-count:3;
+        column-gap: 10px;
+        width: 100%;
+        .item {
+
+        }
+
+      }
+    }
+  }
+
 }
