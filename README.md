@@ -1,6 +1,7 @@
 ## club-blog 个人博客
 ```angular2html
 ui 设计图是从国外找的免费素材
+使用 React + hooks + typescript。
 静态页面已经开发的差不多了。
 ```
 ### 

@@ -9,6 +9,7 @@ import {
 } from '@/store/user/actions'
 import './index.less'
 import cn from "classnames"
+import {useHistory} from "react-router";
 
 
 const concealMaps: { [key: number]: string } = {
@@ -25,6 +26,7 @@ interface LoginProper extends Former {
 }
 const Form = memo((props: Former) => {
     const { onLogin } = props
+    const { push } = useHistory()
     const [conceal,setConceal] = useState<concealType>(0)
     const [name,setName] = useState<any>('')
     const [password,setPassword] = useState<any>('')
@@ -50,6 +52,7 @@ const Form = memo((props: Former) => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
+            push('/')
         },1000)
         onLogin(userInfo)
     }
