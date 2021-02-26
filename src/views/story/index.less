@@ -75,7 +75,8 @@
           z-index: 2;
           height: 200px;
           opacity: 1;
-          background: rgba(140,140,140,0.10);
+          background: rgba(255,255,255,.8);
+          transition: all 2s;
           border-radius: 16px;
           color: #fff;
           backdrop-filter: blur(10px);
@@ -87,7 +88,7 @@
           .content {
             margin-top: 16px;
             font-size: 14px;
-            color: #ebeaea;
+            // color: #ebeaea;
             line-height: 20px;
           }
 
@@ -114,11 +115,35 @@
         }
 
       }
+
+      .puppe {
+        position: relative;
+
+      height: 20px;
+     z-index: 222;
+      }
     }
     .not-data {
       font-size: 18px;
       color: @light-blue;
       text-align: center;
+    }
+  }
+
+  .dynamic {
+    z-index: 3;
+    height: 50px;
+    left: 20px;
+    text-align: center;
+    position: fixed;
+    background: transparent;
+    bottom: 20px;
+    color: @white;
+    .iconfont {
+      font-size: 24px;
+    }
+    p {
+      font-size: 12px;
     }
   }
 }

@@ -50,6 +50,15 @@
     }
 }
 
+@keyframes beat {
+  from {
+    transform: translateY(10%);
+  } to {
+        transform: translateY(-10%);
+
+      }
+}
+
 
 * {
   padding: 0;
@@ -71,6 +80,11 @@ input,button,textarea {
 .rotate {
   animation: rotate 1s infinite;
 }
+
+.beat {
+  animation: beat 1s infinite alternate-reverse;
+}
+
 .default-bg {
   background: linear-gradient(135deg,#ffffff, #f4f7ff);
 }
