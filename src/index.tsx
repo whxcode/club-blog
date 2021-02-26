@@ -10,13 +10,18 @@ import { Provider } from "react-redux";
 import { BrowserRouter,HashRouter } from "react-router-dom"
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter>
       <Provider store={ store }>
           <App />
       </Provider>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById('root')
 );
+if(process.env.NODE_ENV === 'production') {
+    serviceWorker.register()
+} else {
+    serviceWorker.unregister()
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
