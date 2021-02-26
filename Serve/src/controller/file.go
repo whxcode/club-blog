@@ -25,13 +25,13 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 	ext := path.Ext(head.Filename)
 	i := time.Now().UnixNano()
 	ii := strconv.FormatInt(i, 10)
-	url := config.Assets.Public + "\\img\\" + ii + ext
+	url := config.Assets.Public + "/img" + ii + ext
 	fs, _ := os.Create(url)
 	bufio.NewReader(file).WriteTo(fs)
 	defer fs.Close()
 	defer file.Close()
 	model.Send(w, 0, &File{
-		Url:      `http://localhost:8001/img/` + ii + ext,
+		Url:      `http://127.0.0.1:8009/img/` + ii + ext,
 		Ext:      ext,
 		Size:     head.Size,
 		FileName: head.Filename,

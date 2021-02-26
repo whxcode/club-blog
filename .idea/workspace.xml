@@ -10,27 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="优化页面&#10;将 story 页面背景改为动态化。&#10;引入 Vibrant.min.js 库&#10;修改部分配置文件">
-      <change afterPath="$PROJECT_DIR$/Serve/src/controller/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
+    <list default="true" id="aa5b8a86-e805-4174-875e-dc1b204f7649" name="Default Changelist" comment="完成用户登录逻辑处理。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Serve/src/data/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/Serve/src/data/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serve/src/controller/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/Serve/src/controller/file.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serve/src/data/serve.go" beforeDir="false" afterPath="$PROJECT_DIR$/Serve/src/data/serve.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Serve/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Serve/src/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Serve/src/model/core.go" beforeDir="false" afterPath="$PROJECT_DIR$/Serve/src/model/core.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Image/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/user/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/user/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/request.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/articles/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/articles/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home/index/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/profile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/profile/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/story/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/story/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +90,7 @@
       <recent name="D:\react-app\rain\src\asserts\images\placeholder" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.build">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ClubBlog/blog/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -130,8 +116,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
@@ -178,7 +164,7 @@
       <workItem from="1614260956216" duration="8017000" />
       <workItem from="1614305689014" duration="6600000" />
       <workItem from="1614317483646" duration="13000" />
-      <workItem from="1614319354791" duration="5287000" />
+      <workItem from="1614319354791" duration="8951000" />
     </task>
     <task id="LOCAL-00001" summary="1、完成登录、首页、编辑文章、文章列表页面。">
       <created>1613815644503</created>
@@ -390,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614308245046</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="完成用户登录逻辑处理。">
+      <created>1614325605151</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1614325605151</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,6 +437,7 @@
     <MESSAGE value="优化文案&#10;添加心的 icon" />
     <MESSAGE value="优化页面细节" />
     <MESSAGE value="优化页面&#10;将 story 页面背景改为动态化。&#10;引入 Vibrant.min.js 库&#10;修改部分配置文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化页面&#10;将 story 页面背景改为动态化。&#10;引入 Vibrant.min.js 库&#10;修改部分配置文件" />
+    <MESSAGE value="完成用户登录逻辑处理。" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成用户登录逻辑处理。" />
   </component>
 </project>

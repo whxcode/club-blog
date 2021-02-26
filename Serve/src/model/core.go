@@ -3,6 +3,7 @@ package model
 import (
 	"Serve/src/data"
 	"encoding/json"
+	"flag"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	"log"
@@ -16,9 +17,20 @@ import (
 var Db *sqlx.DB = nil
 var MyServe *data.MyServe
 
+//
+var _configFile = flag.String("c","","请输入配置文件")
 // 读取配置文件
 func init() {
-	configFile := "D:\\react-app\\ClubBlog\\Serve\\src\\config\\index.json"
+		flag.Parse()
+	var configFile = ""
+	if(*_configFile == "") {
+		configFile = "D:\\react-app\\ClubBlog\\Serve\\src\\config\\index.json"
+	} else {
+		configFile = *_configFile
+	}
+
+
+	// fmt.Println("path:",configFile)
 	fs, err := os.Open(configFile)
 	if err != nil {
 		log.Fatalln("未能找到配置文件")
@@ -27,6 +39,9 @@ func init() {
 	}
 	config := data.CreateConfig()
 	json.NewDecoder(fs).Decode(config)
+	// b,_ := json.MarshalIndent(config,""," ")
+	// fmt.Println(string(b))
+
 	dsn := strings.Join([]string{config.Mysql.User, ":", config.Mysql.Password, "@tcp", "(",
 		config.Mysql.Host, ":", config.Mysql.Port, ")", "/", config.Mysql.Data, config.Mysql.Other,
 	}, "")

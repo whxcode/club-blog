@@ -20,16 +20,18 @@ func (m *MyServe) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	method := strings.ToUpper(r.Method)
 	m.R = r
 	m.W = w
-
+	// fmt.Println("visit",r.URL.Path)
+	routePath :=  r.URL.Path
+	// fmt.Println(routePath)
 	if method == "POST" {
-		fn, ok := m.post[r.URL.Path]
+		fn, ok := m.post[routePath]
 		if ok {
 			fn(w, r)
 		} else {
 			// 404
 		}
 	} else if method == "GET" {
-		fn, ok := m.get[r.URL.Path]
+		fn, ok := m.get[routePath]
 		if ok {
 			fn(w, r)
 		} else {

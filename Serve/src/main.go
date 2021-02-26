@@ -20,11 +20,14 @@ func main() {
 		Handler: handler,
 	}
 
+	handler.AddGet("/api/test", func(writer http.ResponseWriter, request *http.Request) {
+			writer.Write([]byte("hello world"))
+	})
 
-	handler.AddPost("/login",controller.Login)
+	handler.AddPost("/api/login",controller.Login)
 
 	// 上传文件
-	handler.AddPost("/uploadFile", controller.UploadFile)
+	handler.AddPost("/api/uploadFile", controller.UploadFile)
 
 	// 运行静态资源文件
 	controller.RunAssetsServe(config.Assets.Public, config.Assets.Host)
