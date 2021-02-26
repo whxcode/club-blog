@@ -3,8 +3,11 @@ import {  Route, Switch,Redirect } from 'react-router-dom'
 import routes from "./router"
 import { RouterI } from "./router"
 import { Store } from '@/utils/index'
+import { setUserData } from "@/store/user/actions"
+import { useDispatch } from "react-redux";
 import './App.less'
 const whiteNames: any = ['/login','/screen']
+
 const RouterMaps = ({ routes }: any) => {
     return <Switch>
         {
@@ -30,6 +33,11 @@ const RouterMaps = ({ routes }: any) => {
     </Switch>
 }
 export default () => {
+    const user = Store.get('user')
+    if(user) {
+        const dispatch = useDispatch()
+        dispatch(setUserData(user))
+    }
     return <article className="routers">
         {  <RouterMaps routes={ routes } />  }
     </article>

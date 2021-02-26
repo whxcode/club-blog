@@ -1,6 +1,6 @@
 import React, {memo, useCallback, useMemo, useState} from "react"
 import { connect } from "react-redux"
-import { regexp } from '@/utils/index'
+import {regexp, Store} from '@/utils/index'
 import { IReducer } from "@/store/store"
 import Image from "@/components/Image"
 import {
@@ -36,7 +36,7 @@ const Form = memo((props: Former) => {
     const isSubmit = useMemo(() => {
         return !noteName && !notePwd && !!name && !!password
     },[noteName,notePwd,name,password])
-    function onSubmit() {
+    async function onSubmit() {
         if(loading) {
             return;
         }
@@ -46,15 +46,17 @@ const Form = memo((props: Former) => {
             return
         }
         const userInfo = {
-            name,
+            username: name,
             password,
         }
         setLoading(true)
-        setTimeout(() => {
-            setLoading(false)
-            push('/home/index')
-        },1000)
-        onLogin(userInfo)
+
+        const realData: any = await onLogin(userInfo)
+        setLoading(false)
+        if(!realData.code) {
+            push('/')
+            return
+        }
     }
     return  <section className="form">
         <div className="notice">
@@ -86,7 +88,7 @@ const Form = memo((props: Former) => {
                    id="password" placeholder="enter password,please."
                     onChange={(e) => {
                         const value = e.target.value.trim()
-                        if(value.length <= 6 || value.length >= 10) {
+                        if(value.length <= 5 || value.length >= 10) {
                             setNotePwd('请输入合法密码长度为 6 ~ 10')
                         } else {
                             setNotePwd('')
@@ -157,8 +159,21 @@ export default connect(({ user }:IReducer) => {
     return {
         dispatch,
         async onLogin(param: any) {
+            const user = Store.get('user')
+            if(user) {
+                dispatch(setUserData(user))
+                return {
+                    ...user,
+                    code: 0
+                }
+            }
             const data = await login(param)
-            dispatch(setUserData(data))
+            if(data.code !== 0) {
+                return data
+            }
+            dispatch(setUserData(data.data))
+            Store.set('user',data.data)
+            return data
         }
     }
 })(Login)

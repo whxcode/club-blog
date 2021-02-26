@@ -10,11 +10,11 @@ import { Provider } from "react-redux";
 import { BrowserRouter,HashRouter } from "react-router-dom"
 
 ReactDOM.render(
-  <HashRouter>
+  <BrowserRouter>
       <Provider store={ store }>
           <App />
       </Provider>
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 if(process.env.NODE_ENV === 'production') {
@@ -22,6 +22,11 @@ if(process.env.NODE_ENV === 'production') {
 } else {
     serviceWorker.unregister()
 }
+
+/*request.post('/login',{
+    username: '17345241280',
+    password: '123456'
+})*/
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

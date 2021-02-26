@@ -45,6 +45,7 @@ var codeMap = map[int]string{
 	1: "为能找到该用户",
 	2: "不能删除该角色",
 	3: "sql error",
+	4: "用户已存在",
 }
 
 type Response struct {
@@ -95,9 +96,7 @@ func Send(w http.ResponseWriter, code int, arg ...interface{}) {
 	if len(arg) > 1 {
 		r.Msg = arg[1]
 	}
-	if code == 3 {
-		r.Msg = `mysql inner error:` + arg[0].(string)
-	}
+
 	json.NewEncoder(w).Encode(r)
 }
 

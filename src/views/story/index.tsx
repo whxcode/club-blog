@@ -11,9 +11,10 @@ for (let i = 1; i <= 10; ++i) {
 }
 
 // @ts-ignore
-window.onLoad = function onLoad(this: any) {
+window._onLoadImage = function onLoad(this: any) {
     // @ts-ignore
     const img = window.event.path[0]
+
     // @ts-ignore
     const root = window.event.path[2]
     const content = root.querySelector('.story-content>.hot')
@@ -21,7 +22,10 @@ window.onLoad = function onLoad(this: any) {
     // @ts-ignore
     var vibrant = new window.Vibrant(img);
     var swatches = vibrant.swatches()
-    content.style.background = `${swatches.Muted.getHex()}56`
+
+    content.style.background = `rgba(255,255,255,.8)`
+    // @ts-ignore
+    content.style.color = `${swatches.Vibrant.getHex()}`
 }
 
 
@@ -64,7 +68,7 @@ const Story = memo(() => {
                                        key={ index }
                             >
                             <div class="story-bg">
-                                <img src="${imgs[ii % 10]}" alt="" onLoad="onLoad(this)"/>
+                                <img src="${imgs[ii % 10]}" alt="" onLoad="_onLoadImage(this)"/>
                             </div>
                             <div class="story-content">
                                 <div class="user-wrapper" onclick="_toProfile()" data-id="${ii}" >

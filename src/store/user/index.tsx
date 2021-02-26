@@ -5,13 +5,19 @@ const controller: { [key: number]: any }  = {
         return state
     }
 }
-export default function userReducer(state: IUser = { name: '',password: '' }, { type,data }: { type: number,data: IUser }) {
-    const generator = controller[type]
 
+export interface IUser {
+    username: string
+    password: string
+    about: string
+    avatar: string
+    createTime: string
+    updateTime: string
+    id: number,
+    email: string
+}
+export default function userReducer(state: IUser = ({  } as IUser), { type,data }: { type: number,data: IUser }) {
+    const generator = controller[type]
     return  generator ? generator(data) : state
 }
 
-export interface IUser {
-    name: string
-    password: string
-}

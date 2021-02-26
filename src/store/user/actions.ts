@@ -8,7 +8,6 @@ export function setUserData(data: any) {
 }
 
 export async function  login(param: any) {
-    // const data = await request.post('/login',param)
-    // console.log(data)
-    return param
+    const data = await request.post('/login',param)
+    return data
 }

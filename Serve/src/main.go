@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+
 	handler := data.CreateServe()
 	config := data.CreateConfig()
 	model.MyServe = handler
@@ -18,6 +19,9 @@ func main() {
 		Addr: config.Server.Addr,
 		Handler: handler,
 	}
+
+
+	handler.AddPost("/login",controller.Login)
 
 	// 上传文件
 	handler.AddPost("/uploadFile", controller.UploadFile)

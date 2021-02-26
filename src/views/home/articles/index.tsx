@@ -33,11 +33,15 @@ const WaterFall = memo((props: any) => {
             list.map((item: any,index: number) => {
 
                         return <div className="item" key={  index }>
-                            <img src={ require(`@/asserts/images/test/${
+                            <div className="cover">
+                                <Image className="custom-article-cover" src={ require(`@/asserts/images/test/${
 
-                                Math.trunc(Math.random() * 10) + 1
-                                
-                            }.jpg`) } alt=""/>
+                                    Math.trunc(Math.random() * 9) + 1
+
+                                }.jpg`) } />
+
+                            </div>
+
                             <p>{ index }</p>
                         </div>
                     })
@@ -49,7 +53,7 @@ const WaterFall = memo((props: any) => {
                 return <div className="col" key={ index }>
                     { item.map((item: any,iIindex: number) => {
                         return <div className="item" key={ `${ index }-${ iIindex }` }>
-                            <img src={ require(`@/asserts/images/test/${ 
+                            <img src={ require(`@/asserts/images/test/${
                                 (item % 4) >= 5 ? 4 :  (item % 4) <= 0 ?  1 :  (item % 4)
                             }.jpg`) } alt=""/>
                         </div>

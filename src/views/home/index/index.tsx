@@ -1,9 +1,14 @@
-import React, {memo, useCallback} from "react"
+import React, {memo, useCallback, useMemo} from "react"
 import AwesomeSwiper from 'react-awesome-swiper'
 import Avatar from "@/components/Avatar"
 import Image from "@/components/Image"
 import ArticleItem from "@/components/ArctileIem"
 import {useHistory} from "react-router"
+import { IUser } from "@/store/user"
+import {connect, useStore} from "react-redux"
+import dayjs from "dayjs"
+import Store from '@/store/store'
+
 const config: any = {
     effect: 'coverflow',
     grabCursor: true,
@@ -18,14 +23,28 @@ const config: any = {
     },
 
 }
-const Index = memo(() => {
+interface Proper extends IUser {
+
+}
+
+const Index = memo((props: Proper) => {
+    const { username } = props
     const { push } = useHistory()
+    const { getState } = useStore()
+    const { user } = getState()
     const toProfile = useCallback(() => {
+        if(!('id' in user)) {
+            push('/login')
+            return
+        }
         push('/profile')
-    },[])
+    },[user])
+    const hold = useMemo(() => {
+        return username || dayjs().format('YYYY-MM-DD')
+    },[username])
     return <article className="home-index">
         <header className="header">
-            <p className="phrase">Hi,today</p>
+            <p className="phrase line-1">Hi,{  hold  }</p>
             <h1 className="lately-user">Lately user</h1>
             <span className="user" onClick={ toProfile }>
                 <i className="icon iconfont iconuser" />
@@ -51,7 +70,7 @@ const Index = memo(() => {
                     } }>
                         <div className="hot" >
                             <Image className="hot-card" src="https://ss1.bdstatic.com/70c1FuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3551370719,1936559374&fm=26&gp=0.jpg"/>
-                            <p className="title">Tomorrow</p>
+                            <p className="title">精彩故事，点击查看</p>
                         </div>
                     </div>
 
@@ -60,7 +79,7 @@ const Index = memo(() => {
                     } }>
                         <div className="hot" >
                             <Image className="hot-card" src="https://ss1.bdstatic.com/70c1FuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3551370719,1936559374&fm=26&gp=0.jpg"/>
-                            <p className="title">Tomorrow</p>
+                            <p className="title">精彩故事，点击查看</p>
                         </div>
                     </div>
                 </div>
@@ -90,4 +109,12 @@ const Index = memo(() => {
         </section>
     </article>
 })
-export default Index
+export default connect((state: any) => {
+    return {
+        ...state.user
+    }
+},dispatch => {
+    return {
+
+    }
+})(Index)
